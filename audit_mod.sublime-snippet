@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+class Auditoria${1/^(\w)|(?:_(\w))/(?1\u$1:)(?2\u$2:)/g}(models.Model):
+	fk_${1:nombremodel} = models.ForeignKey(${1/^(\w)|(?:_(\w))/(?1\u$1:)(?2\u$2:)/g})
+    ip_address = models.CharField(max_length=255)
+    fk_usuario = models.ForeignKey(Usuario, db_column='fk_usuario',
+                                   default=None, blank=True, null=True)
+    fecha_evento = models.DateTimeField(['%d/%m/%Y'], blank=True, null=True)
+    fk_evento = models.ForeignKey(TipoEvento, db_column='fk_evento',
+                                  blank=True, null=True)
+
+    def __unicode__(self):
+        return self.fecha_evento + ' ' + self.fk_evento
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>maudit</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.python</scope>
+</snippet>

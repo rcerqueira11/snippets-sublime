@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+fk_evento = TipoEvento.objects.get(nombre='${1:nombre_codigo_evento}')
+# Guardando la auditoria 
+ip = get_client_ip(request)  # Se captura la IP
+ip_address = '0.0.0.0'
+if ip != None:
+    ip_address = ip
+audit_object = ${2:NombreModelAudit}(
+    fk_${3:obj_auditar}=${3:obj_auditar},
+    fk_usuario=request.user,
+    ip_address=ip_address,
+    fecha_evento=datetime.date.today(),
+    fk_evento=fk_evento,
+)
+
+audit_object.save()
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>audit</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.python</scope>
+</snippet>

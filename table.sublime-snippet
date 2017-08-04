@@ -1,0 +1,26 @@
+<snippet>
+	<content><![CDATA[
+
+\begin{table}[htb]	
+\begin{center}
+\begin{tabular}{ | m{6cm} | m{6cm}| } 
+ \hline
+ ${1:titlecol1} & ${2:titlecol2} \\\
+ \hline
+ ${3:val1}. & ${4:val2}.\\\
+ \hline
+ ${5:val3}. & ${6:val4}.\\\
+ \hline
+\end{tabular}
+\caption{${8:Pie_de_la_tabla}}
+\label{Tabla:1}
+\end{center}
+\end{table}	
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tt</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.tex.latex</scope>
+</snippet>

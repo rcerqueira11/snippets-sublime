@@ -1,0 +1,11 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"font_size": 9,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"material_theme_accent_lime": true,
+	"material_theme_tree_headings": true,
+	"theme": "Material-Theme.sublime-theme"
+}

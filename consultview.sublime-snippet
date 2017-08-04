@@ -1,0 +1,38 @@
+<snippet>
+	<content><![CDATA[
+
+class ${1:NombreVista}(View):
+
+    # ${2:Breve Descripcion del view}
+
+    def dispatch(self, request, *args, **kwargs):
+        if request.user.username == '' or request.user.is_authenticated() == False:
+            return redirect(reverse_lazy('registro_logout'))
+        else:
+            return super(${1:this}, self).dispatch(request, *args, **kwargs)
+
+    def get_context(self, data, request):
+        
+        context = {
+            #CONTEXTO GENERICO PARA LOS METODOS GET Y POST
+            'usuario': request.user,
+            'user': request.user,
+            'usuario_datos_basicos': request.user,
+        }
+
+        return context
+   
+
+    def get(self, request, *args, **kwargs):
+        data = request.GET
+        # session_data = request.session
+        context = self.get_context(data,request)
+       
+
+        return render(request, '${3:url}', context)
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>consultview</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.python</scope>
+</snippet>

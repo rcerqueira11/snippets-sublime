@@ -1,0 +1,30 @@
+<snippet>
+	<content><![CDATA[
+json = \$("#id_form_").serializeObject();
+\$.ajax({
+            type: 'POST' ,
+            url: '/${1:url}' , // <= Providing the URL
+            data: json , // <= Providing the form data, serialized above
+            success: function(results){
+                
+                console.log(results);
+                
+                if(results.Result == 'success'){
+                  \$("#modal-confirmacion").modal('hide');
+                  // console.log("");
+
+                  \$("#modal-sucess").modal('show');
+                }else {
+                  \$("#modal-confirmacion").modal('hide');            
+                }
+              },
+            error: function(results){
+                console.log("ERROR");
+            }
+        });
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>post_ajax</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

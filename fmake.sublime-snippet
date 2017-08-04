@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+\$('<input>',{class:'${2:class}', id:'${3:id_name}_'+i, name:'${3:id_name}_'+i, data-date-format:"dd/mm/yyyy", data-date-end-date:"0d", type:'${4:tipo/text/checkbox}', placeholder:"${5:placeholder}" })
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>fmake</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+fk_${1:nombremodel} = models.ForeignKey(${1/^(\w)|(?:_(\w))/(?1\u$1:)(?2\u$2:)/g})
+${2:}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mdk</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.python</scope>
+</snippet>

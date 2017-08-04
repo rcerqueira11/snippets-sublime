@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+/***
+ * ${1:Descripcion de la funcionalidad}
+ *
+ * @param ${2:Si necesita algun parametro en caso contrario N/A}
+ * @author ${3:autor}
+ ***/
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>cjs</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>
